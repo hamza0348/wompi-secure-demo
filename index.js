@@ -55,7 +55,7 @@ app.get('/pagar', (req, res) => {
               reference: reference,
               publicKey: publicKey,
               signature: { integrity: signature },
-              redirectUrl: "/confirmacion"
+              redirectUrl: "https://wompi-secure-demo-production.up.railway.app/confirmacion"
             });
 
             document.getElementById("pay-button").style.display = "inline-block";
