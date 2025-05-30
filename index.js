@@ -12,7 +12,7 @@ const orders = {
   '1002': { amount: 15000.50, currency: 'COP', description: 'Product 2' }
 };
 
-const INTEGRITY_KEY = 'prod_integrity_czf9lmtFTgQqvzDGx9KWOsbEYXvgYHik'; // <--- your real integrity key!
+const INTEGRITY_KEY = 'prod_integrity_4xM2tCJfXO5CEIbwL4w7kXjQps4hVtZh'; // <--- your real integrity key!
 const PUBLIC_KEY = 'pub_prod_bKfXqpYwOA5GRdoZKOUoDFlnqcev5rvh'; // <--- your real public key!
 
 // Serve HTML payment page securely
