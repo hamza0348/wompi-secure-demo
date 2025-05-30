@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wompi Demo</title>
+  <script src="https://checkout.wompi.co/widget.js"></script>
+</head>
+<body>
+  <h1>Pay with Wompi</h1>
+  <form id="payForm"></form>
+
+  <script>
+    async function init() {
+      const { publicKey } = await fetch('/config').then(r => r.json());
+      const form = document.getElementById('payForm');
+      const script = document.createElement('script');
+
+      script.src = 'https://checkout.wompi.co/widget.js';
+      script.setAttribute('data-render', 'button');
+      script.setAttribute('data-public-key', publicKey);
+      script.setAttribute('data-currency', 'COP');
+      script.setAttribute('data-amount-in-cents', '100000'); // $1,000 COP
+      script.setAttribute('data-reference', `order_${Date.now()}`);
+
+      form.appendChild(script);
+    }
+    window.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
